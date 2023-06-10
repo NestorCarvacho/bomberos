@@ -55,18 +55,61 @@
         <tbody>
             {% for hidrante in hidrantes %}
             <tr>
-                <td>{{ hidrante.idHidrnte }}</td>
+                <td>{{ hidrante.idHidrante }}</td>
                 <td>{{ hidrante.direccion }}</td>
                 <td>{{ hidrante.estado }}</td>
-                <td><a href="{% url 'form_mod_hidrante' hidrante.idHidrnte %}" class="btn btn-primary">Modificar</a></td>
-                <td><a href="{% url 'form_del_hidrante' hidrante.idHidrnte%}" class="btn btn-danger">Eliminar</a></td>
+                <td><a href="{% url 'form_mod_hidrantes' hidrante.idHidrante %}" class="btn btn-primary">Modificar</a></td>
+                <td><a href="{% url 'form_del_hidrantes' hidrante.idHidrante%}" class="btn btn-danger">Eliminar</a></td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
-    <a href="{% url 'form_bombero' %}" class="btn btn-success">Nuevo registro</a>
+    <a href="{% url 'form_hidrante' %}" class="btn btn-success">Nuevo registro</a>
     <p>&nbsp;</p>
 </div>
+</section>
+<section id="yellow-bg">
+  <div class="container mt-5">
+    <h3>Lista de Reportes de Falla</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Dirección del Hidrante</th>
+                <th>Estado del Hidrante</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+          {% for reporte in reportes %}
+            <tr>
+              <td>{{ reporte.id }}</td>
+      <td>{{ reporte.hidrante.direccion }}</td>
+      <td>{{ reporte.estado_hidrante }}</td>
+      <td>
+          {% if reporte.estado_hidrante != reporte.hidrante.estado %}
+              <form action="{% url 'aprobar_reporte' reporte.id %}" method="POST">
+                  {% csrf_token %}
+                  <input type="hidden" name="action" value="aprobar">
+                  <button type="submit" class="btn btn-success">Aprobar</button>
+              </form>
+          {% endif %}
+      </td>
+      <td>
+          <form action="{% url 'aprobar_reporte' reporte.id %}" method="POST">
+              {% csrf_token %}
+              <input type="hidden" name="action" value="rechazar">
+              <button type="submit" class="btn btn-danger">Rechazar</button>
+          </form>
+    </td>
+</tr>
+{% endfor %}
+
+        </tbody>
+    </table>
+    <p>&nbsp;</p>
+  </div>
 </section>
 
 

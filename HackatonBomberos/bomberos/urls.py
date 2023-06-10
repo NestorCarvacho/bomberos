@@ -28,7 +28,10 @@ urlpatterns = [
     path('nuestra_historia', nuestra_historia, name='nuestra_historia'),
     path('contacto', contacto, name='contacto'),
 
-    path('lista_hidrantes',lista_hidrantes,name="lista_hidrantes"),
-    path('form_mod_hidrantes/<id>',form_mod_hidrantes,name="form_mod_hidrantes"),
-    path('form_del_hidrantes/<id>',form_del_hidrantes,name="form_del_hidrantes"),
+    path('lista_hidrantes',lista_hidrante,name="lista_hidrantes"),
+    path('form_mod_hidrantes/<id>',form_mod_hidrante,name="form_mod_hidrantes"),
+    path('form_del_hidrantes/<id>',form_del_hidrante,name="form_del_hidrantes"),
+    path('form_hidrante',form_hidrante,name="form_hidrante"),
+    path('form_del_reporte/<id>',form_del_reporte,name="form_del_reporte"),
+    path('aprobar_reporte/<id>', aprobar_reporte, name='aprobar_reporte'),
 ]

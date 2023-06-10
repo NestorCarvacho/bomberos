@@ -69,7 +69,7 @@ class DonacionForm(forms.ModelForm):
         fields = ['nombre', 'email', 'monto', 'metodo_pago', 'cuartel']
 
 
-class FormularioHidrante(forms.ModelForm):
+class HidranteForm(forms.ModelForm):
     
     class Meta:
         model = Hidrante

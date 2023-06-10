@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from .forms import *
 
@@ -229,10 +229,6 @@ def estado_hidrantes(request):
 
 
 
-
-
-
-
 def form_mod_hidrante(request, id):
     hidrante = Hidrante.objects.filter(idHidrante=id).first()
 
@@ -244,9 +240,9 @@ def form_mod_hidrante(request, id):
         formulario = HidranteForm(data=request.POST, instance=hidrante)
         if formulario.is_valid():
             formulario.save()
-            return redirect('lista_hidrante')
+            return redirect('lista_hidrantes')
 
-    return render(request, 'form_mod_hidrante.html', datos)
+    return render(request, 'form_mod_hidrantes.html', datos)
 
 def form_del_hidrante(request, id):
     hidrantes = Hidrante.objects.filter(idHidrante=id)
@@ -254,16 +250,64 @@ def form_del_hidrante(request, id):
     for hidrante in hidrantes:
         hidrante.delete()
     
-    return redirect(to="lista_hidrante")
+    return redirect(to="lista_hidrantes")
+
+def lista_hidrante(request):
+    hidrantes = Hidrante.objects.all();
+    reportes = ReporteFalla.objects.all();
+    
+    for reporte in reportes:
+        reporte.hidrante.direccion=reporte.hidrante.direccion
+
+    return render(request, 'lista_hidrantes.html', {'hidrantes' : hidrantes, 'reportes':reportes})
 
 def form_hidrante(request):
     datos={
-        'form': FormularioHidrante()
+        'form': HidranteForm()
     }
 
     if request.method=='POST':
-        formulario = FormularioHidrante(request.POST)
+        formulario = HidranteForm(request.POST)
         if formulario.is_valid():
             formulario.save()
     
     return render(request,'form_hidrante.html',datos)
+
+def aprobar_reporte(request, id):
+    reporte = ReporteFalla.objects.get(id=id)
+    
+    if request.method == 'POST':
+        action = request.POST.get('action')
+        
+        if action == 'aprobar':
+            # Actualizar el estado del hidrante al estado del reporte
+            hidrante = reporte.hidrante
+            hidrante.estado = reporte.estado_hidrante
+            hidrante.save()
+            reporte.delete()
+            
+            # Realizar cualquier otra acción necesaria
+            
+            # Redirigir a la página de lista de reportes de falla
+            return redirect('lista_hidrantes')
+        
+        elif action == 'rechazar':
+            # Eliminar el reporte de falla
+            reporte.delete()
+            
+            # Realizar cualquier otra acción necesaria
+            
+            # Redirigir a la página de lista de reportes de falla
+            return redirect('lista_hidrantes')
+    
+    context = {'reporte': reporte}
+    return render(request, 'lista_hidrantes.html', context)
+
+
+def form_del_reporte(request, id):
+    reportes = ReporteFalla.objects.filter(id=id)
+    
+    for reporte in reportes:
+        reporte.delete()
+    
+    return redirect(to="lista_hidrantes")
