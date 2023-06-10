@@ -109,6 +109,24 @@ def contacto(request):
     context = {'form': form}
     return render(request, 'contacto.html', context)
 
+def donaciones(request):
+    form = DonacionForm()
+
+    if request.method == 'POST':
+        form = DonacionForm(request.POST)
+        if form.is_valid():
+            # Aquí puedes procesar y almacenar los datos de la donación en la base de datos
+            # y realizar cualquier otra acción necesaria
+            return redirect('agradecimiento')
+
+    return render(request, 'donaciones.html', {'form': form})
+
+def agradecimiento(request):
+    return render(request, 'agradecimiento.html')
+
+
+def confirmar_donacion(request):
+    return render(request, 'confirmar_donacion.html')
 def nuestros_funcionarios(request):
     bomberos = Bombero.objects.all()  # Obtener todos los objetos de la tabla Bombero
 
