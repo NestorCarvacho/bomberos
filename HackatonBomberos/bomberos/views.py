@@ -35,3 +35,16 @@ def form_del_cuartel(request, id):
         cuartel.delete()
     
     return redirect(to="lista_cuarteles")
+
+def form_cuartel(request):
+    datos={
+        'form': CuartelForm()
+
+    }
+
+    if request.method=='POST':
+        formulario = CuartelForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+    
+    return render(request,'form_cuartel.html',datos)
