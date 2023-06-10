@@ -1,0 +1,100 @@
+
+
+
+.bg-light {
+    background-color: #FFDFDF !important;
+}
+
+.carousel-container {
+    margin: 50px auto; /* Ajusta el valor del margen superior según sea necesario */
+    padding: 20px;
+}
+
+.carousel-item img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 400px; /* Establece una altura máxima para la imagen */
+    width: auto;
+    height: auto;
+    
+}
+
+body {
+    display: grid;
+    grid-template-rows: 1fr auto; /* Una fila para el contenido principal y una fila para el footer */
+    min-height: 100vh; /* Establece la altura mínima de la página para ocupar todo el viewport */
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    grid-row: 1; /* Ocupa la primera fila del grid */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer {
+    background-color: #FFDFDF;
+    grid-row: 2; /* Ocupa la segunda fila del grid */
+    padding: 10px;
+}
+
+.navbar {
+    top: 0; /* Coloca el navbar en la parte superior de la página */
+    left: 0; /* Coloca el navbar en el lado izquierdo de la página */
+    width: 100%; /* Establece un ancho del 100% para el navbar */
+    background-color: #FFDFDF;
+    padding: 10px;
+    z-index: 999; /* Asegura que el navbar esté en la parte superior */
+}
+
+
+
+.carousel {
+    width: 95%;
+    height: 400px; /* Establece una altura fija para el carrusel */
+    margin: 0 auto;
+}
+
+.carousel-item img {
+    object-fit: contain;
+}
+
+.carousel-indicators li {
+    background-color: red;
+}
+
+.carousel-control-next-icon{
+    background-color: red;
+}
+.carousel-control-prev-icon{
+    background-color: red;
+}    
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  font-size: 0.75rem; /* Ajusta el tamaño según tus preferencias */
+}
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    /* Agrega estilos adicionales según tus preferencias */
+  }
+  
+  .chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9998;
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    /* Agrega estilos adicionales según tus preferencias */
+    display: none; /* Oculta el contenedor del chat por defecto */
+  }
