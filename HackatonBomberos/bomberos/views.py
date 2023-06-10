@@ -206,6 +206,7 @@ def agradecimiento(request):
 
 def confirmar_donacion(request):
     return render(request, 'confirmar_donacion.html')
+
 def nuestros_funcionarios(request):
     bomberos = Bombero.objects.all()  # Obtener todos los objetos de la tabla Bombero
 
@@ -217,3 +218,50 @@ def nuestros_funcionarios(request):
 
 def nuestra_historia(request):
     return render(request,'nuestra_historia.html')
+
+def administrador(request):
+    return render(request, 'vista_admin.html')
+
+def lista_emergencias(request):
+    emergencias = Emergencia.objects.all()
+
+    for emergencia in emergencias:
+        emergencia.tipo.nombre = emergencia.tipo.nombre
+
+        
+    return render(request, 'lista_emergencias.html', {'emergencias': emergencias})
+
+def form_mod_emergencia(request, id):
+    emergencia = Emergencia.objects.filter(idEmergencia=id).first()
+
+    datos = {
+        'form': EmergenciaForm(instance=emergencia)
+    }
+
+    if request.method == 'POST':
+        formulario = EmergenciaForm(data=request.POST, instance=emergencia)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('lista_emergencias')
+
+    return render(request, 'form_mod_emergencia.html', datos)
+
+def form_del_emergencia(request, id):
+    emergencias = EmergenciaForm.objects.filter(idEmergencia=id)
+
+    for emergencia in emergencias:
+        emergencia.delete()
+
+    return redirect('lista_emergencias')
+
+def form_emergencias(request):
+    datos={
+        'form': EmergenciaForm()
+    }
+
+    if request.method=='POST':
+        formulario = EmergenciaForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+    
+    return render(request,'form_emergencia.html',datos)
