@@ -44,3 +44,16 @@ class FormularioCarro(forms.ModelForm):
     class Meta:
         model = Carro
         fields = ['patente', 'marca', 'modelo', 'anno', 'capacidadPersonas', 'capacidadLitros', 'cuartel']
+
+        
+
+class ReporteFallaForm(forms.ModelForm):
+
+    class Meta:
+        model = ReporteFalla
+        fields = ['rut', 'nombre', 'apellido', 'correo',
+                  'telefono', 'direccion', 'comentario', 'foto']
+        widgets = {
+            'rut': forms.TextInput(attrs={'pattern': '\d{1,2}\.\d{3}\.\d{3}-[0-9kK]{1}', 'title': 'Ingrese un RUT válido (Ejemplo: 12.345.678-9)'}),
+            'comentario': forms.Textarea(attrs={'rows': 4}),
+        }
