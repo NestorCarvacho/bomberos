@@ -26,7 +26,7 @@ def form_mod_cuartel(request, id):
         if formulario.is_valid():
             formulario.save()
 
-    return render(request, 'form_mod_cuartel.html', datos)
+    return render(request, 'lista_cuarteles', datos)
 
 def form_del_cuartel(request, id):
     cuarteles = Cuartel.objects.filter(idCuartel=id)
@@ -48,3 +48,29 @@ def form_cuartel(request):
             formulario.save()
     
     return render(request,'form_cuartel.html',datos)
+
+def lista_carros(request):
+    carros = Carro.objects.all();
+
+    for carro in carros:
+        carro.cuartel.nombre = carro.cuartel.nombre
+    
+    return render(request, 'lista_carros.html', {'carros' : carros})
+
+def form_mod_carro(request, id):
+    carro = Carro.objects.filter(idCarro=id).first()
+
+    datos = {
+        'form': CarroForm(instance=carro)
+    }
+
+    if request.method == 'POST':
+        formulario = CarroForm(data=request.POST, instance=carro)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('lista_carros')
+
+    return render(request, 'form_mod_carro.html', datos)
+
+
+

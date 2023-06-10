@@ -39,43 +39,18 @@
     </div>
   </nav>
 
-  <div class="container mt-5">
-    <h3>Lista de carros</h3>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Patente</th>
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Año</th>
-                <th>Capacidad de personas</th>
-                <th>Capacidad de litros</th>
-                <th>Cuartel</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for carro in carros %}
-            <tr>
-                <td>{{ carro.idCarro }}</td>
-                <td>{{ carro.patente }}</td>
-                <td>{{ carro.marca }}</td>
-                <td>{{ carro.modelo }}</td>
-                <td>{{ carro.anno }}</td>
-                <td>{{ carro.capacidadPersonas }}</td>
-                <td>{{ carro.capacidadLitros }}</td>
-                <td>{{ carro.cuartel }}</td>
-                <td><a href="{% url 'form_mod_carro' carro.idCarro %}" class="btn btn-primary">Modificar</a></td>
-                <td><a href="#" class="btn btn-danger">Eliminar</a></td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <a href="{% url 'form_cuartel' %}" class="btn btn-success">Nuevo registro</a>
-    <p>&nbsp;</p>
-</div>
+  <div class="container bg-dark text-light mt-2 mb-2  border border-light" style="padding: 2%;">
+        <h1>Modifica carro</h1>
+
+            <form method="POST" action="" autocomplete="off">
+                {% csrf_token %}
+                <table class="table table-bordered text-light">
+                    {{ form.as_table }}
+                </table>
+          
+                <button type="submit" class="btn btn-success">Modificar</button>
+          </form>
+    </div>
 
 
   <footer class="bg-light">

@@ -12,7 +12,9 @@ class CuartelForm(ModelForm):
         model = Cuartel
         fields = ['nombre','direccion','comuna']
         
-class CarroForm(ModelForm):
+class CarroForm(forms.ModelForm):
+    patente = forms.CharField(widget=forms.TextInput(attrs={'readonly': 'readonly'}))
+
     class Meta:
         model = Carro
         fields = ['patente', 'marca', 'modelo', 'anno', 'capacidadPersonas', 'capacidadLitros', 'cuartel']
