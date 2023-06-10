@@ -9,7 +9,7 @@ class Comuna(models.Model):
 
 class Cuartel(models.Model):
     idCuartel = models.AutoField(primary_key=True, verbose_name='ID')
-    nombre = models.CharField(max_length=100, verbose_name='Nombre')
+    nombre = models.CharField(max_length=100, verbose_name='Nombre cuartel')
     direccion = models.CharField(max_length=100, null=True, blank=True, verbose_name='Direccion')
     comuna = models.ForeignKey(Comuna, on_delete=models.CASCADE)
 
@@ -24,7 +24,7 @@ class Carro(models.Model):
     anno = models.IntegerField(verbose_name='Año')
     capacidadPersonas = models.IntegerField(verbose_name='Capacidad personas')
     capacidadLitros = models.IntegerField(verbose_name='Capacidad Litros')
-    cuartel = models.ForeignKey(Cuartel, on_delete=models.CASCADE)
+    cuartel = models.ForeignKey(Cuartel, on_delete=models.CASCADE, default=1)
 
     def __str__(self):
         return self.patente
@@ -47,9 +47,10 @@ class Bombero(models.Model):
     telefono = models.IntegerField(verbose_name='Telefono')
     direccion = models.CharField(max_length=100, verbose_name='Direccion')
     cargo = models.ForeignKey(Cargo, on_delete=models.CASCADE)
+    cuartel = models.ForeignKey(Cuartel, on_delete=models.CASCADE, null=True)
     
     def __str__(self):
-        return self.idBombero
+        return self.nombre
     
 class TipoEmergencia(models.Model):
     idTipoEmergencia = models.AutoField(primary_key=True, verbose_name='ID Tipo emergencia')
