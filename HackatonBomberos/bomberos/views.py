@@ -35,3 +35,15 @@ def form_del_cuartel(request, id):
         cuartel.delete()
     
     return redirect(to="lista_cuarteles")
+
+def formulario_reporte_fallas(request):
+    if request.method == 'POST':
+        form = ReporteFallaForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            # Realizar acciones adicionales si es necesario
+    else:
+        form = ReporteFallaForm()
+    
+    context = {'form': form}
+    return render(request, 'form_reporte_fallas.html', context)
