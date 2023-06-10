@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomberos Maipú</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">Bomberos Maipú</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#nosotros">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nuestros_funcionarios">Nuestros funcionarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#historia">Nuestra historia</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+  <section id="yellow-bg">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-4 g-4" id="card-container">
+            <!-- Contenedor de las tarjetas -->
+        </div>
+    </div>
+  </section>
+  <footer class="bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h3>Sobre nosotros</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum mattis tincidunt.</p>
+            </div>
+            <div class="col-md-4">
+                <h3>Categoría</h3>
+                <ul>
+                    <li>Nosotros</li>
+                    <li>Nuestros funcionarios</li>
+                    <li>Nuestra historia</li>
+                    <li>Contacto</li>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>Contacto</h3>
+                <ul>
+                    <li>Nuestra ubicación</li>
+                    <li>Teléfono: xxx-xxx-xxxx</li>
+                </ul>   
+            </div>
+        </div>
+    </div>
+    </div>
+
+</footer>
+<script>
+    // Obtener los datos de los bomberos desde la base de datos (puedes obtenerlos mediante una vista de Django o cualquier otra forma)
+    var datos = [
+        {% for bombero in bomberos %}
+        {
+            rut: {{ bombero.rut }},
+            dv: "{{ bombero.dv }}",
+            nombre: "{{ bombero.nombre }}",
+            apPaterno: "{{ bombero.apPaterno }}",
+            apMaterno: "{{ bombero.apMaterno }}",
+            edad: {{ bombero.edad }},
+            telefono: {{ bombero.telefono }},
+            direccion: "{{ bombero.direccion }}",
+            cargo: "{{ bombero.cargo.nombre }}",
+            cuartel: "{{ bombero.cuartel.nombre }}"
+        },
+        {% endfor %}
+    ];
+
+    // Generar las tarjetas en base a los datos
+    var cardContainer = document.getElementById("card-container");
+    datos.forEach(function (bombero) {
+        var card = document.createElement("div");
+        card.classList.add("col");
+        card.innerHTML = `
+            <div class="card mb-4">
+                <div class="card-body">
+                    <img src="../static/img/logo.png" class="card-img-top" alt="...">
+                    <h5 class="card-title">${bombero.nombre}</h5><hr>
+                    <p class="card-text">
+                        <strong>Edad:</strong> ${bombero.edad}<br><hr>
+                        <strong>Cargo:</strong> ${bombero.cargo}<br><hr>
+                        <strong>Cuartel:</strong> ${bombero.cuartel}<br><hr>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-${bombero.rut}">Acceder</button>
+                    </p>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="modal-${bombero.rut}" tabindex="-1" aria-labelledby="modal-${bombero.rut}-label" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modal-${bombero.rut}-label">Información detallada de ${bombero.nombre}</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>
+                                <strong>Edad:</strong> ${bombero.edad}<br>
+                                <strong>Cargo:</strong> ${bombero.cargo}<br>
+                                <strong>historia:</strong>{% lorem 1 b random %}<br>
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        cardContainer.appendChild(card);
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
