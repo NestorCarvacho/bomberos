@@ -13,5 +13,12 @@ urlpatterns = [
     path('form_del_carro/<id>',form_del_carro,name="form_del_carro"),
     path('form_carros',form_carro,name="form_carros"),
     path('lista_cargos',lista_cargos,name="lista_cargos"),
+    path('form_mod_cargo/<id>',form_mod_cargo,name="form_mod_cargo"),
+    path('form_del_cargo/<id>',form_del_cargo,name="form_del_cargo"),
+    path('form_cargos',form_cargos,name="form_cargos"),
+    path('lista_bomberos',lista_bomberos,name="lista_bomberos"),
+    path('form_mod_bombero/<id>',form_mod_bombero,name="form_mod_bombero"),
+    path('form_del_bombero/<id>',form_del_bombero,name="form_del_bombero"),
+    path('form_bombero',form_bombero,name="form_bombero"),
     path('formulario/', formulario_reporte_fallas, name='formulario'),
 ]

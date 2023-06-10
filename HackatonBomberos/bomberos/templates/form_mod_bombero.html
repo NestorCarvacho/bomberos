@@ -40,31 +40,18 @@
   </nav>
 
 <section id="yellow-bg">
-  <div class="container mt-5">
-    <h3>Lista de cargos</h3>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nombre</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for cargo in cargos %}
-            <tr>
-                <td>{{ cargo.idCargo }}</td>
-                <td>{{ cargo.nombre }}</td>
-                <td><a href="{% url 'form_mod_cargo' cargo.idCargo %}" class="btn btn-primary">Modificar</a></td>
-                <td><a href="{% url 'form_del_cargo' cargo.idCargo %}" class="btn btn-danger">Eliminar</a></td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <a href="{% url 'form_cargos' %}" class="btn btn-success">Nuevo registro</a>
-    <p>&nbsp;</p>
-</div>
+  <div class="container bg-dark text-light mt-2 mb-2  border border-light" style="padding: 2%;">
+        <h1>Modificar bombero</h1>
+
+            <form method="POST" action="" autocomplete="off">
+                {% csrf_token %}
+                <table class="table table-bordered text-light">
+                    {{ form.as_table }}
+                </table>
+          
+                <button type="submit" class="btn btn-success">Modificar</button>
+          </form>
+    </div>
 </section>
 
   <footer class="bg-light">

@@ -45,6 +45,14 @@ class FormularioCarro(forms.ModelForm):
         model = Carro
         fields = ['patente', 'marca', 'modelo', 'anno', 'capacidadPersonas', 'capacidadLitros', 'cuartel']
 
+class BomberoModificar(ModelForm):
+    rut = forms.IntegerField(widget=forms.TextInput(attrs={'readonly': 'readonly'}))
+    dv = forms.CharField(widget=forms.TextInput(attrs={'readonly': 'readonly'}))
+
+    class Meta:
+        model = Bombero
+        fields = ['rut','dv', 'nombre', 'apPaterno', 'apMaterno', 'edad', 'telefono', 'direccion', 'cargo']
+
         
 
 class ReporteFallaForm(forms.ModelForm):
