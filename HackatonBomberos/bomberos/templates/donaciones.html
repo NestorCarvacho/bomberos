@@ -1,80 +1,164 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Página de Donaciones</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomberos Maipú</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Donaciones para el Cuartel de Bomberos</h1>
-
-        <!-- Información sobre el cuartel de bomberos -->
-        <div class="card">
-            <div class="card-header">
-                <h2>Información del Cuartel de Bomberos</h2>
-            </div>
-            <div class="card-body">
-                <p>Aquí puedes describir el cuartel de bomberos, su ubicación, servicios que brinda, etc.</p>
-                <p>Incluye historias de éxito o impacto para destacar cómo las donaciones han ayudado en situaciones de emergencia.</p>
-            </div>
-        </div>
-
-        <!-- Métodos de pago -->
-        <div class="card mt-3">
-            <div class="card-header">
-                <h2>Formas de Pago</h2>
-            </div>
-            <div class="card-body">
-                <p>Ofrecemos diferentes métodos de pago para tu comodidad:</p>
-                <ul>
-                    <li>Transferencia bancaria</li>
-                    <li>Tarjeta de crédito</li>
-                    <li>PayPal</li>
-                    <!-- Agrega aquí otros métodos de pago disponibles -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bomberos Maipú</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nuestros_funcionarios">Nuestros funcionarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="nuestra_historia">Nuestra historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
                 </ul>
             </div>
         </div>
+    </nav>
+    <section id="yellow-bg">
+        <div class="container">
+            <div class="row">
 
-        <!-- Transparencia y confianza -->
-        <div class="card mt-3">
-            <div class="card-header">
-                <h2>Transparencia y Confianza</h2>
+                <h1>Donaciones para el Cuartel de Bomberos</h1>
+
+                <!-- Información sobre el cuartel de bomberos -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Información del Cuartel de Bomberos</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>El Cuerpo de Bomberos de Maipú es una institución dedicada a proteger y servir a la comunidad de Maipú
+                             en situaciones de emergencia. Nuestro cuartel, ubicado estratégicamente en el corazón de la comuna,
+                              cuenta con un equipo altamente capacitado y equipamiento de vanguardia para responder de manera eficiente
+                               a incendios, rescates y accidentes.</p>
+                        <p>Nuestra misión principal es salvaguardar vidas, proteger propiedades y preservar el bienestar de los
+                             habitantes de Maipú. Trabajamos en estrecha colaboración con otras instituciones y servicios de
+                              emergencia para brindar una respuesta integral y coordinada. Además, nos comprometemos a promover
+                               la cultura de la prevención y la seguridad a través de programas comunitarios y capacitaciones.</p>
+                        <p>Como parte activa de la comunidad, participamos en eventos locales y estamos disponibles las 24 horas del
+                             día, los 365 días del año. Nuestro objetivo es brindar tranquilidad y protección a cada persona que vive,
+                              trabaja o visita nuestra comuna. Confía en el Cuerpo de Bomberos de Maipú, tu seguridad es nuestra prioridad.
+                               En caso de emergencia, no dudes en llamar al número de emergencias local y nuestros valientes bomberos
+                                acudirán en tu auxilio.</p>
+                    </div>
+                </div>
             </div>
-            <div class="card-body">
-                <p>En nuestro cuartel de bomberos, nos esforzamos por mantener una gestión transparente y eficiente de las donaciones. Aquí se encuentran nuestros compromisos:</p>
-                <ul>
-                    <li>Publicación regular de informes financieros y de impacto.</li>
-                    <li>Participación en auditorías externas para garantizar la correcta administración de los fondos.</li>
-                    <li>Sellos y certificaciones de confianza respaldando nuestra labor.</li>
-                </ul>
+            <div class="row">
+                <!-- Métodos de pago -->
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h2>Formas de Pago</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Ofrecemos diferentes métodos de pago para tu comodidad:</p>
+                        <ul>
+                            <li>Transferencia bancaria</li>
+                            <li>Tarjeta de crédito</li>
+                            <li>PayPal</li>
+                            <!-- Agrega aquí otros métodos de pago disponibles -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <!-- Transparencia y confianza -->
+                <div class="card mt-3">
+                    <div class="card-header">
+                        <h2>Transparencia y Confianza</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>En nuestro cuartel de bomberos, nos esforzamos por mantener una gestión transparente y
+                            eficiente de las donaciones. Aquí se encuentran nuestros compromisos:</p>
+                        <ul>
+                            <li>Publicación regular de informes financieros y de impacto.</li>
+                            <li>Participación en auditorías externas para garantizar la correcta administración de los
+                                fondos.</li>
+                            <li>Sellos y certificaciones de confianza respaldando nuestra labor.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Formulario de donaciones -->
+        <div>
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h2>¡Haz tu Donación!</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="{% url 'confirmar_donacion' %}">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Confirmar Donación</button>
+                    </form>
+                </div>
             </div>
         </div>
 
-        <!-- Formulario de donaciones -->
-        <div class="card mt-3">
-            <div class="card-header">
-                <h2>¡Haz tu Donación!</h2>
-            </div>
-            <div class="card-body">
-                <form method="post" action="{% url 'confirmar_donacion' %}">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <button type="submit" class="btn btn-primary">Confirmar Donación</button>
-                </form>
-            </div>
-        </div>
-
-        <!-- Mensaje de agradecimiento -->
-        <div class="card mt-3">
-            <div class="card-header">
-                <h2>Agradecimiento</h2>
-            </div>
-            <div class="card-body">
-                <p>¡Gracias por tu generosa donación! Tu apoyo es fundamental para continuar salvando vidas y protegiendo a nuestra comunidad. Valoramos tu contribución y te mantendremos informado sobre cómo se utilizarán los fondos.</p>
+            <!-- Mensaje de agradecimiento -->
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h2>Agradecimiento</h2>
+                </div>
+                <div class="card-body">
+                    <p>¡Gracias por tu generosa donación! Tu apoyo es fundamental para continuar salvando vidas y
+                        protegiendo a nuestra comunidad. Valoramos tu contribución y te mantendremos informado sobre
+                        cómo se utilizarán los fondos.</p>
+                </div>
             </div>
         </div>
-    </div>
+        <footer class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h3>Sobre nosotros</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum mattis tincidunt.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Categoría</h3>
+                        <ul>
+                            <li>Nosotros</li>
+                            <li>Nuestros funcionarios</li>
+                            <li>Nuestra historia</li>
+                            <li>Contacto</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h3>Contacto</h3>
+                        <ul>
+                            <li>Nuestra ubicación</li>
+                            <li>Teléfono: xxx-xxx-xxxx</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
 
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
