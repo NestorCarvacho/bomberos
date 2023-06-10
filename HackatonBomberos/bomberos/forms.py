@@ -38,3 +38,9 @@ class EmergenciaForm(ModelForm):
     class Meta:
         model = Emergencia
         fields = ['tipo', 'descripcion', 'fechaInicio']
+
+class FormularioCarro(forms.ModelForm):
+    
+    class Meta:
+        model = Carro
+        fields = ['patente', 'marca', 'modelo', 'anno', 'capacidadPersonas', 'capacidadLitros', 'cuartel']

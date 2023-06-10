@@ -72,5 +72,31 @@ def form_mod_carro(request, id):
 
     return render(request, 'form_mod_carro.html', datos)
 
+def form_del_carro(request, id):
+    carros = Carro.objects.filter(idCarro=id)
+    
+    for carro in carros:
+        carro.delete()
+    
+    return redirect(to="lista_carros")
+
+def form_carro(request):
+    datos={
+        'form': FormularioCarro()
+    }
+
+    if request.method=='POST':
+        formulario = FormularioCarro(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+    
+    return render(request,'form_carros.html',datos)
+
+def lista_cargos(request):
+    cargos = Cargo.objects.all();
+    
+    return render(request, 'lista_carros.html', {'cargos' : cargos})
+
+
 
 
