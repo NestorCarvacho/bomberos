@@ -95,7 +95,85 @@ def form_carro(request):
 def lista_cargos(request):
     cargos = Cargo.objects.all();
     
-    return render(request, 'lista_carros.html', {'cargos' : cargos})
+    return render(request, 'lista_cargos.html', {'cargos' : cargos})
+
+def form_mod_cargo(request, id):
+    cargo = Cargo.objects.filter(idCargo=id).first()
+
+    datos = {
+        'form': CargoForm(instance=cargo)
+    }
+
+    if request.method == 'POST':
+        formulario = CargoForm(data=request.POST, instance=cargo)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('lista_cargos')
+
+    return render(request, 'form_mod_cargo.html', datos)
+
+def form_del_cargo(request, id):
+    cargo = Cargo.objects.filter(idCargo=id)
+    
+    for cargo in cargo:
+        cargo.delete()
+    
+    return redirect(to="lista_cargos")
+
+def form_cargos(request):
+    datos={
+        'form': CargoForm()
+    }
+
+    if request.method=='POST':
+        formulario = CargoForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+    
+    return render(request,'form_cargos.html',datos)
+
+def lista_bomberos(request):
+    bomberos = Bombero.objects.all();
+
+    for bombero in bomberos:
+        bombero.cuartel.nombre = bombero.cuartel.nombre
+    
+    return render(request, 'lista_bomberos.html', {'bomberos' : bomberos})
+
+def form_mod_bombero(request, id):
+    bombero = Bombero.objects.filter(idBombero=id).first()
+
+    datos = {
+        'form': BomberoModificar(instance=bombero)
+    }
+
+    if request.method == 'POST':
+        formulario = BomberoModificar(data=request.POST, instance=bombero)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('lista_bomberos')
+
+    return render(request, 'form_mod_bombero.html', datos)
+
+def form_del_bombero(request, id):
+    bomberos = Bombero.objects.filter(idBombero=id)
+
+    for bombero in bomberos:
+        bombero.delete()
+
+    return redirect('lista_bomberos')
+
+def form_bombero(request):
+    datos={
+        'form': BomberoForm()
+    }
+
+    if request.method=='POST':
+        formulario = BomberoForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+    
+    return render(request,'form_bombero.html',datos)
 
 def contacto(request):
     if request.method == 'POST':
@@ -108,6 +186,7 @@ def contacto(request):
     
     context = {'form': form}
     return render(request, 'contacto.html', context)
+
 
 def donaciones(request):
     form = DonacionForm()
