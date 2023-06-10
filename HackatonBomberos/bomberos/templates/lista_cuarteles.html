@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bomberos Maipú</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../CSS/style.css">
-  <script src="../JS/bot.js"></script>
+  <link rel="stylesheet" href="../static/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
@@ -49,22 +48,24 @@
                 <th>Nombre</th>
                 <th>Dirección</th>
                 <th>Comuna</th>
+                <th></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
             {% for cuartel in cuarteles %}
             <tr>
-                <td>{{ cuartel.id_cuartel }}</td>
+                <td>{{ cuartel.idCuartel }}</td>
                 <td>{{ cuartel.nombre }}</td>
                 <td>{{ cuartel.direccion }}</td>
                 <td>{{ cuartel.comuna }}</td>
-                <td><a href="{% url 'form_mod_vehiculo' vehiculo.patente %}" class="btn btn-primary">Modificar</a></td>
-                <td><a href="{% url 'form_del_vehiculo' vehiculo.patente %}" class="btn btn-danger">Eliminar</a></td>
+                <td><a href="{% url 'form_mod_cuartel' cuartel.idCuartel %}" class="btn btn-primary">Modificar</a></td>
+                <td><a href="{% url 'form_del_cuartel' cuartel.idCuartel %}" class="btn btn-danger">Eliminar</a></td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
-    <a href="{% url 'form_vehiculo' %}" class="btn btn-success">Nuevo registro</a>
+    <a href="#" class="btn btn-success">Nuevo registro</a>
     <p>&nbsp;</p>
 </div>
 
