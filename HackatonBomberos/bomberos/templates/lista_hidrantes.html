@@ -7,82 +7,9 @@
   <title>Bomberos Maipú</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="../static/css/style.css">
-  {% comment %} <link rel="stylesheet" href="../static/css/sgs.css"> {% endcomment %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-<style>
-  #formato_formulario{
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  form {
-    margin-bottom: 30px;
-  }
-
-  .input-wrapper {
-    margin-bottom: 20px;
-  }
-
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  input[type="number"],
-  textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  },
-  select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: #f8f9fa;
-  }
-
-  textarea {
-    resize: vertical;
-  }
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .btn-primary {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-  }
-  /* Estilos específicos para SGS */
-  label::after {
-    content: ":";
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea,
-  input[type="file"] {
-    background-color: #f8f9fa;
-  }
-
-  input[type="checkbox"] {
-    margin-top: 5px;
-    margin-right: 5px;
-  }
-</style>
 </head>
 
 <body>
@@ -111,27 +38,38 @@
       </div>
     </div>
   </nav>
-  <section id="formato_formulario">   
-    <div class="container text-dark mt-2 mb-2 border border-light" style="padding: 3%;">
-      <h1 class="text-center mb-4">Formulario de Reporte de Hidrantes</h1>
-      <form method="post" action="" id="formulario">
-        {% csrf_token %}
-        <div class="input-wrapper">
-          {{ form.as_p }}
-        </div>
-        <div class="form-check form-switch">
-          <br>
-          <input class="form-check-input" type="checkbox" id="terminosCondiciones" required>
-          <label class="form-check-label" for="terminosCondiciones"><a href="terminosycondiciones.html">Acepto Términos y condiciones</a></label>
-        </div>
-        <br>
-        <div class="text-center">
-          <button type="submit" class="btn btn-primary">Enviar</button>
-          <button type="reset" class="btn btn-secondary">Limpiar</button>
-        </div>
-      </form>
-    </div>
-  </section>
+
+<section id="yellow-bg">
+  <div class="container mt-5">
+    <h3>Lista de Hidrantes</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Direccion</th>
+                <th>Estado</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for hidrante in hidrantes %}
+            <tr>
+                <td>{{ hidrante.idHidrnte }}</td>
+                <td>{{ hidrante.direccion }}</td>
+                <td>{{ hidrante.estado }}</td>
+                <td><a href="{% url 'form_mod_hidrante' hidrante.idHidrnte %}" class="btn btn-primary">Modificar</a></td>
+                <td><a href="{% url 'form_del_hidrante' hidrante.idHidrnte%}" class="btn btn-danger">Eliminar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'form_bombero' %}" class="btn btn-success">Nuevo registro</a>
+    <p>&nbsp;</p>
+</div>
+</section>
+
+
   <footer class="bg-light">
     <div class="container">
       <div class="row">
@@ -166,6 +104,3 @@
 </body>
 
 </html>
-
-
-  
