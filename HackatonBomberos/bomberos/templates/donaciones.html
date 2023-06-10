@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Página de Donaciones</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Donaciones para el Cuartel de Bomberos</h1>
+
+        <!-- Información sobre el cuartel de bomberos -->
+        <div class="card">
+            <div class="card-header">
+                <h2>Información del Cuartel de Bomberos</h2>
+            </div>
+            <div class="card-body">
+                <p>Aquí puedes describir el cuartel de bomberos, su ubicación, servicios que brinda, etc.</p>
+                <p>Incluye historias de éxito o impacto para destacar cómo las donaciones han ayudado en situaciones de emergencia.</p>
+            </div>
+        </div>
+
+        <!-- Métodos de pago -->
+        <div class="card mt-3">
+            <div class="card-header">
+                <h2>Formas de Pago</h2>
+            </div>
+            <div class="card-body">
+                <p>Ofrecemos diferentes métodos de pago para tu comodidad:</p>
+                <ul>
+                    <li>Transferencia bancaria</li>
+                    <li>Tarjeta de crédito</li>
+                    <li>PayPal</li>
+                    <!-- Agrega aquí otros métodos de pago disponibles -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Transparencia y confianza -->
+        <div class="card mt-3">
+            <div class="card-header">
+                <h2>Transparencia y Confianza</h2>
+            </div>
+            <div class="card-body">
+                <p>En nuestro cuartel de bomberos, nos esforzamos por mantener una gestión transparente y eficiente de las donaciones. Aquí se encuentran nuestros compromisos:</p>
+                <ul>
+                    <li>Publicación regular de informes financieros y de impacto.</li>
+                    <li>Participación en auditorías externas para garantizar la correcta administración de los fondos.</li>
+                    <li>Sellos y certificaciones de confianza respaldando nuestra labor.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Formulario de donaciones -->
+        <div class="card mt-3">
+            <div class="card-header">
+                <h2>¡Haz tu Donación!</h2>
+            </div>
+            <div class="card-body">
+                <form method="post" action="{% url 'confirmar_donacion' %}">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Confirmar Donación</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Mensaje de agradecimiento -->
+        <div class="card mt-3">
+            <div class="card-header">
+                <h2>Agradecimiento</h2>
+            </div>
+            <div class="card-body">
+                <p>¡Gracias por tu generosa donación! Tu apoyo es fundamental para continuar salvando vidas y protegiendo a nuestra comunidad. Valoramos tu contribución y te mantendremos informado sobre cómo se utilizarán los fondos.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

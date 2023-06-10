@@ -14,4 +14,7 @@ urlpatterns = [
     path('form_carros',form_carro,name="form_carros"),
     path('lista_cargos',lista_cargos,name="lista_cargos"),
     path('formulario/', formulario_reporte_fallas, name='formulario'),
+    path('donaciones/', donaciones, name='donaciones'),
+    path('agradecimiento/', agradecimiento, name='agradecimiento'),
+    path('confirmar_donacion/', confirmar_donacion, name='confirmar_donacion'),
 ]
