@@ -1,0 +1,17 @@
+
+  /* Estilos específicos para SGS */
+  label::after {
+    content: ":";
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  input[type="file"] {
+    background-color: #f8f9fa;
+  }
+
+  input[type="checkbox"] {
+    margin-top: 5px;
+    margin-right: 5px;
+  }
