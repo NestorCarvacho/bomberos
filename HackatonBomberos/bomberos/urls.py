@@ -27,4 +27,8 @@ urlpatterns = [
     path('nuestros_funcionarios', nuestros_funcionarios, name='nuestros_funcionarios'),
     path('nuestra_historia', nuestra_historia, name='nuestra_historia'),
     path('contacto', contacto, name='contacto'),
+
+    path('lista_hidrantes',lista_hidrantes,name="lista_hidrantes"),
+    path('form_mod_hidrantes/<id>',form_mod_hidrantes,name="form_mod_hidrantes"),
+    path('form_del_hidrantes/<id>',form_del_hidrantes,name="form_del_hidrantes"),
 ]
