@@ -108,3 +108,15 @@ def formulario_reporte_fallas(request):
     
     context = {'form': form}
     return render(request, 'form_reporte_fallas.html', context)
+
+def nuestros_funcionarios(request):
+    bomberos = Bombero.objects.all()  # Obtener todos los objetos de la tabla Bombero
+
+    context = {
+        'bomberos': bomberos  # Pasar los bomberos como contexto a la plantilla HTML
+    }
+
+    return render(request, 'nuestros_funcionarios.html', context)
+
+def nuestra_historia(request):
+    return render(request,'nuestra_historia.html')
