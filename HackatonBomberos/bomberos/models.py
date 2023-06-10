@@ -76,3 +76,13 @@ class ReporteFalla(models.Model):
     comentario = models.TextField()
     foto = models.ImageField(upload_to='fallas/', blank=True, null=True)
     fecha_creacion = models.DateTimeField(auto_now_add=True)
+    
+class Donacion(models.Model):
+    nombre = models.CharField(max_length=100)
+    email = models.EmailField()
+    monto = models.DecimalField(max_digits=8, decimal_places=2)
+    metodo_pago = models.CharField(max_length=50)
+    cuartel = models.ForeignKey(Cuartel, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.nombre

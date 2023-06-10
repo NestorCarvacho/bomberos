@@ -4,6 +4,7 @@ from .views import *
 
 urlpatterns = [
     path('',index, name="home"),
+    path('index',index, name="home"),
     path('lista_cuarteles',lista_cuarteles,name="lista_cuarteles"),
     path('form_mod_cuartel/<id>',form_mod_cuartel,name="form_mod_cuartel"),
     path('form_del_cuartel/<id>',form_del_cuartel, name="form_del_cuartel"),
@@ -21,4 +22,9 @@ urlpatterns = [
     path('form_del_bombero/<id>',form_del_bombero,name="form_del_bombero"),
     path('form_bombero',form_bombero,name="form_bombero"),
     path('formulario/', formulario_reporte_fallas, name='formulario'),
+    path('donaciones/', donaciones, name='donaciones'),
+    path('agradecimiento/', agradecimiento, name='agradecimiento'),
+    path('confirmar_donacion/', confirmar_donacion, name='confirmar_donacion'),
+    path('nuestros_funcionarios', nuestros_funcionarios, name='nuestros_funcionarios'),
+    path('nuestra_historia', nuestra_historia, name='nuestra_historia'),
 ]
