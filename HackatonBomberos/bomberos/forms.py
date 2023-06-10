@@ -56,15 +56,12 @@ class BomberoModificar(ModelForm):
         
 
 class ReporteFallaForm(forms.ModelForm):
+    hidrante = forms.ModelChoiceField(queryset=Hidrante.objects.all(), empty_label=None, widget=forms.Select)
+    estado_hidrante = forms.ChoiceField(choices=ESTADOS_HIDRANTE, widget=forms.Select)
 
     class Meta:
         model = ReporteFalla
-        fields = ['rut', 'nombre', 'apellido', 'correo',
-                  'telefono', 'direccion', 'comentario', 'foto']
-        widgets = {
-            'rut': forms.TextInput(attrs={'pattern': '\d{1,2}\.\d{3}\.\d{3}-[0-9kK]{1}', 'title': 'Ingrese un RUT válido (Ejemplo: 12.345.678-9)'}),
-            'comentario': forms.Textarea(attrs={'rows': 4}),
-        }
+        fields = [ 'rut', 'nombre', 'apellido', 'correo', 'telefono', 'hidrante', 'estado_hidrante', 'comentario', 'foto']
 
 class DonacionForm(forms.ModelForm):
     class Meta:

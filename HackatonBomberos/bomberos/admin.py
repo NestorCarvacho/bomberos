@@ -9,5 +9,6 @@ admin.site.register(Cargo)
 admin.site.register(Bombero)
 admin.site.register(TipoEmergencia)
 admin.site.register(Emergencia)
+admin.site.register(Hidrante)
 
 # Register your models here.

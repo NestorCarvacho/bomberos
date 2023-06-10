@@ -65,6 +65,22 @@ class Emergencia(models.Model):
     descripcion = models.CharField(max_length=500, verbose_name='Descripcion')
     fechaInicio = models.DateField(verbose_name='Fecha inicio')
 
+ESTADOS_HIDRANTE = (
+    ('bueno', 'Bueno'),
+    ('danado', 'Dañado'),
+    ('falta_mantencion', 'Falta de Mantención'),
+) 
+ 
+class Hidrante(models.Model):
+    
+
+    idHidrante = models.AutoField(primary_key=True)
+    direccion = models.CharField(max_length=100)
+    estado = models.CharField(max_length=50, choices=ESTADOS_HIDRANTE)
+
+
+    def __str__(self):
+        return f'Hidrante {self.idHidrante}: {self.direccion}'   
     
 class ReporteFalla(models.Model):
     rut = models.CharField(max_length=12)
@@ -72,10 +88,13 @@ class ReporteFalla(models.Model):
     apellido = models.CharField(max_length=100)
     correo = models.EmailField()
     telefono = models.CharField(max_length=20)
+    hidrante = models.ForeignKey(Hidrante, on_delete=models.CASCADE, null=True)
+    estado_hidrante = models.CharField(max_length=100, choices=ESTADOS_HIDRANTE, null=True)
     direccion = models.CharField(max_length=200)
     comentario = models.TextField()
     foto = models.ImageField(upload_to='fallas/', blank=True, null=True)
     fecha_creacion = models.DateTimeField(auto_now_add=True)
+    estado_aprobado = models.BooleanField(default=False)
     
 class Donacion(models.Model):
     nombre = models.CharField(max_length=100)
@@ -86,3 +105,5 @@ class Donacion(models.Model):
 
     def __str__(self):
         return self.nombre
+    
+   
