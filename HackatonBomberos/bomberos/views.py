@@ -175,7 +175,7 @@ def form_bombero(request):
     
     return render(request,'form_bombero.html',datos)
 
-def formulario_reporte_fallas(request):
+def contacto(request):
     if request.method == 'POST':
         form = ReporteFallaForm(request.POST, request.FILES)
         if form.is_valid():
@@ -185,7 +185,7 @@ def formulario_reporte_fallas(request):
         form = ReporteFallaForm()
     
     context = {'form': form}
-    return render(request, 'form_reporte_fallas.html', context)
+    return render(request, 'contacto.html', context)
 
 
 def donaciones(request):
