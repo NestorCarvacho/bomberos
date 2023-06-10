@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bomberos Maipú</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Bomberos Maipú</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#nosotros">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#funcionarios">Nuestros funcionarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#historia">Nuestra historia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<section id="yellow-bg">
+    <div class="container text-dark mt-2 mb-2 border border-light" style="padding: 3%;">
+        <h1 class="text-center mb-4">Formulario de ingreso de bombero</h1>
+        <form method="post" action="" id="formulario">
+            {% csrf_token %}
+            <div class="input-wrapper">
+                {{form.as_p}}
+            <div class="form-check form-switch">
+                <br>
+                    <input class="form-check-input" type="checkbox" role="switch" id="terminosCondiciones" required>
+                    <label class="form-check-label" for="terminosCondiciones"><a href="terminosycondiciones.html">Acepto Terminos y condiciones</a></label>
+                </div>
+              <br>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Enviar</button>
+                <button type="reset" class="btn btn-secondary">Limpiar</button>
+              </div>
+              </div>
+            </form>
+          </div>
+</section>
+
+  <footer class="bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Sobre nosotros</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum mattis tincidunt.</p>
+        </div>
+        <div class="col-md-4">
+          <h3>Categoría</h3>
+          <ul>
+            <li>Nosotros</li>
+            <li>Nuestros funcionarios</li>
+            <li>Nuestra historia</li>
+            <li>Contacto</li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3>Contacto</h3>
+          <ul>
+            <li>Nuestra ubicación</li>
+            <li>Teléfono: xxx-xxx-xxxx</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  </footer>
+    
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
