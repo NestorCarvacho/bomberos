@@ -34,4 +34,12 @@ urlpatterns = [
     path('form_hidrante',form_hidrante,name="form_hidrante"),
     path('form_del_reporte/<id>',form_del_reporte,name="form_del_reporte"),
     path('aprobar_reporte/<id>', aprobar_reporte, name='aprobar_reporte'),
+    path('administrador', administrador, name='contacto'),
+    path('lista_emergencias', lista_emergencias, name='lista_emergencias'),
+    path('form_mod_emergencia/<id>',form_mod_emergencia,name="form_mod_emergencia"),
+    path('form_del_emergencia/<id>',form_del_emergencia,name="form_del_emergencia"),
+    path('form_emergencia',form_emergencias,name="form_emergencia"),
+    path('lista_hidrantes',lista_hidrante,name="lista_hidrantes"),
+    path('form_mod_hidrantes/<id>',form_mod_hidrante,name="form_mod_hidrantes"),
+    path('form_del_hidrantes/<id>',form_del_hidrante,name="form_del_hidrantes"),
 ]

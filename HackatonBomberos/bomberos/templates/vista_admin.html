@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bomberos Maipú</title>
+  <title>Bomberos Maipú ADMINISTRADOR</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="../static/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,37 +42,38 @@
     </div>
   </nav>
 
+
+  
 <section id="yellow-bg">
-  <div class="container mt-5">
-    <h3>Lista de emergencias</h3>
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Tipo emergencia</th>
-                <th>Descripcion emergencia</th>
-                <th>Fecha inicio</th>
-                <th></th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for emergencia in emergencias %}
-            <tr>
-                <td>{{ emergencia.idEmergencia }}</td>
-                <td>{{ emergencia.tipo }}</td>
-                <td>{{ emergencia.descripcion }}</td>
-                <td>{{ emergencia.fechaInicio }}</td>
-                <td><a href="{% url 'form_mod_emergencia' emergencia.idEmergencia %}" class="btn btn-primary">Modificar</a></td>
-                <td><a href="{% url 'form_del_emergencia' emergencia.idEmergencia %}" class="btn btn-danger">Eliminar</a></td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <a href="{% url 'form_emergencia' %}" class="btn btn-success">Nuevo registro</a>
-    <p>&nbsp;</p>
-</div>
-</section>
+  <div class="carousel-container" >
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../static/img/img1.jpg" alt="Imagen 1" class="rounded">
+        </div>
+        <div class="carousel-item">
+          <img src="../static/img/img2.jpg" alt="Imagen 2" class="rounded">
+        </div>
+        <div class="carousel-item">
+          <img src="../static/img/img3.jpg" alt="Imagen 3" class="rounded">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon rounded-circle" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </a>
+    </div>
+  </div>
+  </section>
 
 
   <footer class="bg-light">
