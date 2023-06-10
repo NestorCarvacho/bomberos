@@ -1,0 +1,31 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="tipo_emergencia" directorySegmentName="seg_0" id="2E39DA39-FB17-AEE3-8263-0A7EFA5A3E8C">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="nombre" id="49A02E3A-4698-CFC3-7845-6D2DE9E0C956">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="id_tipo_emergencia" id="4D808B58-C154-A566-2D5D-85D35F585485">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="tipo_emergencia_PK" id="49D94A37-E760-EBDB-EE8B-66484778DA5F">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

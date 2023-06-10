@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EF262F89-2A79-9FE1-6668-D13C1145C2AA" name="CARGO">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>380D3453-6216-572C-3E23-5107333492E8</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_cargo" id="0DACF14C-91C3-B184-D320-71EDB8D4A47C">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>98AEB321-A686-5D74-5900-581E76005CE3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>403C0305-5B6E-7EE3-8EC8-EF7B439B1F30</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="A185EDD1-0CF1-57D7-E97F-22A76CCE05FB">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>EAFEC281-A262-F394-5600-C3044B5CCDA3</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1D256E7B-6D32-774B-83EC-A1BF974C418F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3FD55D29-58CA-C58B-D142-CAFFD4546A25" name="CARGO_PK">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>18DA134C-A3C0-2A07-344B-72F6E633BDC2</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0DACF14C-91C3-B184-D320-71EDB8D4A47C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

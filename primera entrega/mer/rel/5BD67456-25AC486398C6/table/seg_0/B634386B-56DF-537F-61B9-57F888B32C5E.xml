@@ -1,0 +1,76 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B634386B-56DF-537F-61B9-57F888B32C5E" name="USUARIO">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>8562469F-9A60-8566-A16B-EA072CD3A1D1</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_usuario" id="6AC412EA-0DAB-502F-1C98-26281D980B26">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>8CFFCF06-A6A1-95EA-8CBD-D946FBE35A55</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>403C0305-5B6E-7EE3-8EC8-EF7B439B1F30</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="872C1A59-365B-74A8-E993-F3F8AA54121F">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>2C8014C1-7D41-7FC5-717D-DEEA45A5C839</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1D256E7B-6D32-774B-83EC-A1BF974C418F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="correo" id="9662F182-6CDE-82D5-DC6B-3E0B679C6961">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>3EC5734A-C481-326B-04BC-57B00F98EA75</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1D256E7B-6D32-774B-83EC-A1BF974C418F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="contrasena" id="7A99F756-F05E-16AD-6D86-0B97B67F99C7">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>63158B57-DF94-8C7C-4602-6FD64E890CE4</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1D256E7B-6D32-774B-83EC-A1BF974C418F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="93D1F4ED-56D7-A081-6145-D34E5AEE4B1C" name="USUARIO_PK">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>D357DFA2-BFF9-E6F6-FA81-0042875263C5</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6AC412EA-0DAB-502F-1C98-26281D980B26"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

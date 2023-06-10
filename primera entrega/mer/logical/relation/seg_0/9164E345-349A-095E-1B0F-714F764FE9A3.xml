@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="emergencia_COMUNA_FK" directorySegmentName="seg_0" id="9164E345-349A-095E-1B0F-714F764FE9A3">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>33FD9D1F-1041-7064-D623-2EFD9420721E</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<sourcePk>E39FAB83-B0F9-405F-8502-A2E4335B150D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C47A1EE9-9BA9-B48A-0CA0-55BD6F6F42D8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EBF642C6-56BB-703B-CD73-6FD37882BBB4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

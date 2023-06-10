@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="carro_CUARTEL_FK" directorySegmentName="seg_0" id="1AF6B678-67AF-53DF-E27E-CAD88226C5C3">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>DD7D3CBD-679B-5C0A-9B3A-A36B17B58072</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<sourcePk>F829A04A-14B1-BB09-76C7-E3E8293C3F65</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C1896658-CF13-9ED4-0D55-F7987BB63591</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D121824D-07E4-8A30-B9C2-721CEE017B06</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

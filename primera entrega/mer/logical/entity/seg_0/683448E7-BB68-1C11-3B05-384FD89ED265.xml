@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="683448E7-BB68-1C11-3B05-384FD89ED265" name="registro emergencia">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>CF6F57D7-4779-8C64-A718-52A1D3CBFE0C</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id carro" id="0DAC2EE3-B9AB-3067-249A-11A320FA7C39">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>95F47F83-2DAC-B137-88D8-AFCC542D12EC</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<referedAttribute>4F1120F4-AF3A-8C11-FD34-E266130021DB</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>403C0305-5B6E-7EE3-8EC8-EF7B439B1F30</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id bombero" id="CBB48AEC-4314-3AD2-D2DB-A65EEE7AE519">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>B70B08E6-F1D4-A127-DADB-8E58059BCB89</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<referedAttribute>3246FB1D-F68B-4227-8D31-E8059F6E8433</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>403C0305-5B6E-7EE3-8EC8-EF7B439B1F30</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id emergencia" id="D508E941-6AC9-F6D2-9871-233D30A540EF">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>3D82D291-275E-398C-5ED2-35AF431F46A3</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>403C0305-5B6E-7EE3-8EC8-EF7B439B1F30</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha termino" id="0451B508-7731-875A-617C-7FCD9EF46463">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>7E8940B8-D099-B830-871C-794E2550376C</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>5C7A4CA9-C092-8123-D4DA-78D3B0625478</domain>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id comuna" id="588B543B-94EF-CB4C-9F77-FE7B5DA0E75E">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>4C1BC144-2C76-3B9C-C2EA-81718FFFD527</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<referedAttribute>E7B56522-7C8C-F184-AB27-E0B5E3E62692</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>403C0305-5B6E-7EE3-8EC8-EF7B439B1F30</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4F612C95-33A7-91C9-6306-ABE6A9A61F93" name="registro emergencia PK">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>D347840E-F6A5-8C6D-ADA5-F77B3CEF412D</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0DAC2EE3-B9AB-3067-249A-11A320FA7C39</attributeRef>
+<attributeRef>CBB48AEC-4314-3AD2-D2DB-A65EEE7AE519</attributeRef>
+<attributeRef>D508E941-6AC9-F6D2-9871-233D30A540EF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

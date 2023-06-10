@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2B05A0DE-E73A-ACE0-8962-6AC109853749" name="CARGO">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>EF262F89-2A79-9FE1-6668-D13C1145C2AA</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id cargo" id="6F826CEA-972D-29F2-3DFE-2037EB482583">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>0DACF14C-91C3-B184-D320-71EDB8D4A47C</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>403C0305-5B6E-7EE3-8EC8-EF7B439B1F30</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="BBB240FC-86F2-C06C-54D4-CEEDCEFD0820">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>A185EDD1-0CF1-57D7-E97F-22A76CCE05FB</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>1D256E7B-6D32-774B-83EC-A1BF974C418F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="13E907BA-A21C-F355-9A5F-642C5395B2AB" name="CARGO PK">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>3FD55D29-58CA-C58B-D142-CAFFD4546A25</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6F826CEA-972D-29F2-3DFE-2037EB482583</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

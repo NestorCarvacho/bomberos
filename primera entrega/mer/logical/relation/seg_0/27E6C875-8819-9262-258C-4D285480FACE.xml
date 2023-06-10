@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="emergencia_tipo_emergencia_FK" directorySegmentName="seg_0" id="27E6C875-8819-9262-258C-4D285480FACE">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>E4E12381-9459-AB97-F571-F0A8DF6619EF</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<sourcePk>1FA2B423-5CBD-D71E-742B-EB5E626A3B1D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F4CC4FF8-B4DE-4783-F7A2-DEA594B19A70</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>EBF642C6-56BB-703B-CD73-6FD37882BBB4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

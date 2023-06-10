@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E4E12381-9459-AB97-F571-F0A8DF6619EF" containerWithKeyObject="431A502D-F92C-AE9F-C08A-54B63DE604B7" localFKIndex="5481F2F5-0F05-1F4A-7D53-E1DD7B24B3EC" name="emergencia_tipo_emergencia_FK">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>381B6793-B057-B4AB-0D70-17219736D650</importedID>
+<referredTableLongName>tipo_emergencia</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>2E39DA39-FB17-AEE3-8263-0A7EFA5A3E8C</referredTableID>
+<keyObject>49D94A37-E760-EBDB-EE8B-66484778DA5F</keyObject>
+<referredKeyID>49D94A37-E760-EBDB-EE8B-66484778DA5F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_tipo_emergencia</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

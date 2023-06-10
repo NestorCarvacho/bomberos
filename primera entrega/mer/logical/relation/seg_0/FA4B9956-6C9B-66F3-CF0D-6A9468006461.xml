@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="BOMBERO_COMUNA_FK" directorySegmentName="seg_0" id="FA4B9956-6C9B-66F3-CF0D-6A9468006461">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>E8651F86-E152-3542-D08A-F859EEB7394A</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<sourcePk>E39FAB83-B0F9-405F-8502-A2E4335B150D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C47A1EE9-9BA9-B48A-0CA0-55BD6F6F42D8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C09E3FCB-490B-705D-FC5E-9732AAF05A6D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

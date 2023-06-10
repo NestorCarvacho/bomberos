@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CF6F57D7-4779-8C64-A718-52A1D3CBFE0C" name="registro_emergencia">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>23802FB8-8210-CE6E-ABEE-12A4E583A70B</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_carro" id="1DC28915-B5BF-34A1-7B30-06ACE98D705D">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>628CCF02-9F75-A964-CEA0-426DF0497FA1</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>403C0305-5B6E-7EE3-8EC8-EF7B439B1F30</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="062AFE70-A805-38F9-F879-9450DFB052B7" referredColumn="F5D39E5D-36E9-EC3B-2D8B-11A26CD430B1"/>
+</associations>
+</Column>
+<Column name="id_bombero" id="59E2DFD6-FE52-6AC6-16A9-590613EEDE8E">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>7D2D0DE3-F30D-FAFC-A43E-BADA0A90265C</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>403C0305-5B6E-7EE3-8EC8-EF7B439B1F30</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B5684C54-86E5-6827-0BF2-C1BB3259436A" referredColumn="EC846BA7-9EB9-8545-9F68-D91A6E83B8A8"/>
+</associations>
+</Column>
+<Column name="id_emergencia" id="3D82D291-275E-398C-5ED2-35AF431F46A3">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>F22CA481-3965-614E-41DF-52B22DA11341</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>403C0305-5B6E-7EE3-8EC8-EF7B439B1F30</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_termino" id="7E8940B8-D099-B830-871C-794E2550376C">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>AA7D0E2B-4F26-C969-EF08-EB8E7642ADAD</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>5C7A4CA9-C092-8123-D4DA-78D3B0625478</domain>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_comuna" id="A3666AA3-002E-9D29-DB06-DE48EAD41C2A">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>D54FC452-9717-123E-0057-DAD11CCEF11F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>403C0305-5B6E-7EE3-8EC8-EF7B439B1F30</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DEF679F6-E760-04C3-6662-92844A06C0E3" referredColumn="02F6243A-8BFF-404C-A054-0E3CD7F86A7B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D347840E-F6A5-8C6D-ADA5-F77B3CEF412D" name="registro_emergencia_PK">
+<sourceDDLFile>db_bomberos.sql</sourceDDLFile>
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<importedID>5F2BF6EC-CF94-8ECC-10F4-165A6FF28831</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1DC28915-B5BF-34A1-7B30-06ACE98D705D"/>
+<colUsage columnID="59E2DFD6-FE52-6AC6-16A9-590613EEDE8E"/>
+<colUsage columnID="3D82D291-275E-398C-5ED2-35AF431F46A3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="258E6AC4-8730-3A48-F967-A3B6DAE55D83" name="registro_emergencia_BOMBERO_FK">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="59E2DFD6-FE52-6AC6-16A9-590613EEDE8E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6F5FB403-6355-31E3-EF2F-AC2CB2DDD95A" name="registro_emergencia_carro_FK">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1DC28915-B5BF-34A1-7B30-06ACE98D705D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4A4AD4BF-7004-82A0-F205-8406C20A47E6" name="registro_emergencia_COMUNA_FK">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:40 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A3666AA3-002E-9D29-DB06-DE48EAD41C2A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

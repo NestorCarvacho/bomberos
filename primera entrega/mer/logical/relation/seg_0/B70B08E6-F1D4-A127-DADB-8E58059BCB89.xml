@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="registro_emergencia_BOMBERO_FK" directorySegmentName="seg_0" id="B70B08E6-F1D4-A127-DADB-8E58059BCB89">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>B5684C54-86E5-6827-0BF2-C1BB3259436A</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<sourcePk>E82104A7-D465-6090-147A-3EFF5FEC482D</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C09E3FCB-490B-705D-FC5E-9732AAF05A6D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>683448E7-BB68-1C11-3B05-384FD89ED265</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

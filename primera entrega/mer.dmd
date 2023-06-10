@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="mer" id="32DFCE0D-DDEE-1E6F-09A1-379BFADB1B94" version="3.5">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:29 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>32DFCE0D-DDEE-1E6F-09A1-379BFADB1B94</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="BC36A70A-E9EC-47F9-CC76-A4CB9F14D5BA">
+<designStoragePath>C:\db_bomberos</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

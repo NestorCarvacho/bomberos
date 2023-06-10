@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="BOMBERO_CARGO_FK" directorySegmentName="seg_0" id="D92A0303-E7A5-6E4E-8E95-1962E7C2DCF0">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>0879C0B4-1DEE-5952-CB44-8B2C783EF913</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<sourcePk>13E907BA-A21C-F355-9A5F-642C5395B2AB</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>2B05A0DE-E73A-ACE0-8962-6AC109853749</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C09E3FCB-490B-705D-FC5E-9732AAF05A6D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

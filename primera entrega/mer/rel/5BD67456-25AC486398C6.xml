@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="5BD67456-7AF9-3374-C42D-25AC486398C6" mainViewID="DF88621C-090F-E5A7-082B-B19122CF6E7B">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:19:29 UTC</createdTime>
+<ownerDesignName>mer</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>01F6E6D1-21D0-CFBD-ABDD-3988D1813575</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>db_bomberos.sql</fileName>
+<pathName>C:\Users\nicol\OneDrive\Escritorio</pathName>
+<dbType>17</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

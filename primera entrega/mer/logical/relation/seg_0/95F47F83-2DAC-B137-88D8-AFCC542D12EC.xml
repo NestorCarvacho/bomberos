@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="registro_emergencia_carro_FK" directorySegmentName="seg_0" id="95F47F83-2DAC-B137-88D8-AFCC542D12EC">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>062AFE70-A805-38F9-F879-9450DFB052B7</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<sourcePk>9AD29C1B-55D0-33AA-613D-B6C48112DFB3</sourcePk>
+<identifying>true</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D121824D-07E4-8A30-B9C2-721CEE017B06</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>683448E7-BB68-1C11-3B05-384FD89ED265</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CUARTEL_COMUNA_FK" directorySegmentName="seg_0" id="701DDB97-7ECE-EDBE-7A5F-CE34A70EFF1C">
+<createdBy>nicol</createdBy>
+<createdTime>2023-06-10 00:20:22 UTC</createdTime>
+<generatorID>01F7D966-D32F-1C0C-B365-9770088E8868</generatorID>
+<ownerDesignName>mer</ownerDesignName>
+<engineerTo>
+<item key="5BD67456-7AF9-3374-C42D-25AC486398C6" value="true"/>
+</engineerTo>
+<sourcePk>E39FAB83-B0F9-405F-8502-A2E4335B150D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C47A1EE9-9BA9-B48A-0CA0-55BD6F6F42D8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>C1896658-CF13-9ED4-0D55-F7987BB63591</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
