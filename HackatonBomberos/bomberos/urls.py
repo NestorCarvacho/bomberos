@@ -21,10 +21,10 @@ urlpatterns = [
     path('form_mod_bombero/<id>',form_mod_bombero,name="form_mod_bombero"),
     path('form_del_bombero/<id>',form_del_bombero,name="form_del_bombero"),
     path('form_bombero',form_bombero,name="form_bombero"),
-    path('formulario/', formulario_reporte_fallas, name='formulario'),
     path('donaciones/', donaciones, name='donaciones'),
     path('agradecimiento/', agradecimiento, name='agradecimiento'),
     path('confirmar_donacion/', confirmar_donacion, name='confirmar_donacion'),
     path('nuestros_funcionarios', nuestros_funcionarios, name='nuestros_funcionarios'),
     path('nuestra_historia', nuestra_historia, name='nuestra_historia'),
+    path('contacto', contacto, name='contacto'),
 ]
