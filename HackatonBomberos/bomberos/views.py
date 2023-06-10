@@ -219,6 +219,7 @@ def nuestros_funcionarios(request):
 def nuestra_historia(request):
     return render(request,'nuestra_historia.html')
 
+
 def administrador(request):
     return render(request, 'vista_admin.html')
 
@@ -265,3 +266,48 @@ def form_emergencias(request):
             formulario.save()
     
     return render(request,'form_emergencia.html',datos)
+
+def estado_hidrantes(request):
+    hidrantes = Hidrante.objects.all()  # Obtener todos los objetos de la tabla Bombero
+
+    context = {
+        'hidrantes': hidrantes  # Pasar los bomberos como contexto a la plantilla HTML
+    }
+
+    return render(request, 'listaHidrantes.html', context)
+
+
+def form_mod_hidrante(request, id):
+    hidrante = Hidrante.objects.filter(idHidrante=id).first()
+
+    datos = {
+        'form': HidranteForm(instance=hidrante)
+    }
+
+    if request.method == 'POST':
+        formulario = HidranteForm(data=request.POST, instance=hidrante)
+        if formulario.is_valid():
+            formulario.save()
+            return redirect('lista_hidrante')
+
+    return render(request, 'form_mod_hidrante.html', datos)
+
+def form_del_hidrante(request, id):
+    hidrantes = Hidrante.objects.filter(idHidrante=id)
+    
+    for hidrante in hidrantes:
+        hidrante.delete()
+    
+    return redirect(to="lista_hidrante")
+
+def form_hidrante(request):
+    datos={
+        'form': FormularioHidrante()
+    }
+
+    if request.method=='POST':
+        formulario = FormularioHidrante(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+    
+    return render(request,'form_hidrante.html',datos)

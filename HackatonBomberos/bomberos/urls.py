@@ -32,4 +32,7 @@ urlpatterns = [
     path('form_mod_emergencia/<id>',form_mod_emergencia,name="form_mod_emergencia"),
     path('form_del_emergencia/<id>',form_del_emergencia,name="form_del_emergencia"),
     path('form_emergencia',form_emergencias,name="form_emergencia"),
+    path('lista_hidrantes',lista_hidrantes,name="lista_hidrantes"),
+    path('form_mod_hidrantes/<id>',form_mod_hidrantes,name="form_mod_hidrantes"),
+    path('form_del_hidrantes/<id>',form_del_hidrantes,name="form_del_hidrantes"),
 ]
